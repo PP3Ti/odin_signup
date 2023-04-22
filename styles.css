@@ -1,0 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* EN OF RESETING DEFAULT CSS STYLING */
+body {
+	height: 100vh;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	display: grid;
+	grid-template: 1fr 200px 400px 150px 1fr / 2fr 2fr 1fr;
+}
+
+.left { 
+	position: relative;
+	grid-area: 1 / 1 / 6 / 2;
+	background-image: url("./background.avif");
+	background-size: cover;
+}
+.motivation-text {
+	grid-area: 2 / 2 / span 1 / span 1;
+	padding: 2rem;
+	font-size: 22px;
+	font-weight: 500;
+	font-style: oblique;
+}
+.motivation-text>p {
+	margin-top: 1rem;
+}
+.logo-area {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 250px;
+	height: 200px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#brand {
+	align-self: center;
+	color: rgb(255, 255, 255);
+	font-size: 5rem;
+}
+.credit {
+	position: absolute;
+	bottom: 30px;
+	color: white;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 16px;
+	transform: translateX(-50%);
+	left: 50%;
+}
+.main-content {
+	grid-area: 3 / 2 / span 1 / span 1;	
+	box-shadow: -5px 2px 6px 3px rgba(0,0,0,0.1);
+	padding: 2rem;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+.main-content>p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-bottom: 2rem;
+	font-weight: bold;
+}
+#signUpForm {
+	height: 100%;
+	display: grid;
+	grid-template: repeat(3, 1fr) / 1fr 1fr;
+}
+#signUpForm>div {
+	padding: 1rem;
+	padding-left: 0;
+}
+label {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 11px;
+	font-weight: 600;
+}
+input {
+	font-size: 18px;
+	margin-top: 4px;
+	border: 1px solid;
+	border-radius: 4px;
+	border-color: #E5E7EB;
+	box-shadow: none;
+}
+input:focus{
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.footer {
+	grid-area: 4 / 2 / span 1 / span 1;
+	padding: 2rem;
+	font-size: large;
+}
+#createAccount {
+	font-size: 1.5rem;
+	padding: 16px 48px;
+	color:white;
+	background-color: #596D48;
+	border: none;
+	border-radius: 8px;
+	margin: 0.5rem;
+	margin-left: 0;
+	margin-bottom: 2rem;
+}
+#createAccount:hover {
+	transform: scale(1.1);
+}
+
+.validInput {
+	border-color: #637e4bc2;
+	background-color: #aae2795d;
+}
+
+.invalidInput {
+	border-color: #b35353;
+	background-color: #ff83835b;
+}
